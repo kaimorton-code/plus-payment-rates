@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Plus — Transaction Fees & Payment Rates</title>
+<style>
+  :root {
+    --plus-green: #008060;
+    --plus-green-dark: #004c3f;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --bg: #f6f6f4;
+    --card: #ffffff;
+    --border: #e5e5e2;
+    --accent: #fff7d6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 56px 24px 80px; }
+
+  header {
+    border-bottom: 4px solid var(--plus-green);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  .eyebrow {
+    color: var(--plus-green);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .subtitle {
+    color: var(--ink-soft);
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  .platform-banner {
+    background: linear-gradient(135deg, var(--plus-green) 0%, var(--plus-green-dark) 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .platform-banner .label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.85;
+    margin-bottom: 6px;
+  }
+  .platform-banner .value {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .platform-banner .note {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 4px;
+  }
+  .platform-banner .channel-rates {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .platform-banner .chip {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .platform-banner .chip strong { font-size: 16px; display: block; }
+
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+  section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--plus-green-dark);
+    margin-bottom: 4px;
+  }
+  section .section-sub {
+    color: var(--ink-soft);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .rates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .rate {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .rate .label {
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .rate .price {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .rate .meta {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .rate.highlight {
+    background: var(--accent);
+    border-color: #f0d97a;
+  }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--ink-soft);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a { color: var(--plus-green); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Shopify Plus</div>
+    <h1>Transaction Fees & Payment Rates</h1>
+    <p class="subtitle">All Shopify Plus rates in one place.</p>
+  </header>
+
+  <div class="platform-banner">
+    <div>
+      <div class="label">Platform Fee</div>
+      <div class="value">$2,300 USD / month</div>
+      <div class="note">Minimum — or variable platform fee, whichever is higher (calculated monthly)</div>
+    </div>
+    <div class="channel-rates">
+      <div class="chip"><strong>0.35%</strong>DTC (Online)</div>
+      <div class="chip"><strong>0.25%</strong>POS (In-Person)</div>
+      <div class="chip"><strong>0.18%</strong>B2B</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Online — Standard Consumer Cards</h2>
+    <p class="section-sub">Shopify Payments, standard Visa / Mastercard / Discover</p>
+    <div class="rates">
+      <div class="rate">
+        <div class="label">Domestic (US-issued)</div>
+        <div class="price">2.25% + $0.30</div>
+      </div>
+      <div class="rate">
+        <div class="label">International (Non-US)</div>
+        <div class="price">3.25% + $0.30</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Online — Premium Cards (Commercial & Amex)</h2>
+    <p class="section-sub">Higher-cost interchange tiers</p>
+    <div class="rates">
+      <div class="rate">
+        <div class="label">Domestic / Amex</div>
+        <div class="price">2.95% + $0.30</div>
+      </div>
+      <div class="rate">
+        <div class="label">International</div>
+        <div class="price">3.95% + $0.30</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Shop Pay Express</h2>
+    <p class="section-sub">Accelerated checkout via Shop Pay</p>
+    <div class="rates">
+      <div class="rate">
+        <div class="label">Domestic</div>
+        <div class="price">3.9% + $0.30</div>
+      </div>
+      <div class="rate">
+        <div class="label">International / Amex</div>
+        <div class="price">4.9% + $0.30</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Shop Pay Installments</h2>
+    <p class="section-sub">Buy-now-pay-later at checkout</p>
+    <div class="rates">
+      <div class="rate">
+        <div class="label">Standard</div>
+        <div class="price">5.0% + $0.30</div>
+      </div>
+      <div class="rate">
+        <div class="label">Premium · 6-month</div>
+        <div class="price">7.9% + $0.30</div>
+      </div>
+      <div class="rate">
+        <div class="label">Premium · 12-month</div>
+        <div class="price">9.9% + $0.30</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>POS (In-Person)</h2>
+    <p class="section-sub">Card-present transactions</p>
+    <div class="rates">
+      <div class="rate">
+        <div class="label">Card Present</div>
+        <div class="price">2.3% + $0.10</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>B2B</h2>
+    <p class="section-sub">Wholesale payment methods</p>
+    <div class="rates">
+      <div class="rate highlight">
+        <div class="label">ACH Transfers</div>
+        <div class="price">1%</div>
+        <div class="meta">Capped at $7.50 per transaction</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3rd-Party Payment Gateways</h2>
+    <p class="section-sub">When using a non-Shopify Payments gateway</p>
+    <div class="rates">
+      <div class="rate">
+        <div class="label">Transaction Fee</div>
+        <div class="price">0.20%</div>
+        <div class="meta">Per transaction</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Shopify Plus rates reference
+  </footer>
+
+</div>
+</body>
+</html>
